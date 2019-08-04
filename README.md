@@ -1,1 +1,0 @@
-# HandWriting-AI
