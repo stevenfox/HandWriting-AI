@@ -1,26 +1,22 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TensorFlow.js Tutorial</title>
+
+    <!-- Import TensorFlow.js -->
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <!-- Import tfjs-vis -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+
+    <!-- Import the data file -->
+    <script src="js/data.js" type="module"></script>
+
+    <!-- Import the main script file -->
+    <script src="js/script.js" type="module"></script>
   </head>
-  <body>
-    <div id="ts"></div>
-    <script>
-      // Define a model for linear regression.
-      const model = tf.sequential();
-      model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
 
-      model.compile({ loss: 'meanSquaredError', optimizer: 'sgd' });
-
-      // Generate some synthetic data for training.
-      const xs = tf.tensor2d([1, 2, 3, 4], [4, 1]);
-      const ys = tf.tensor2d([1, 3, 5, 7], [4, 1]);
-
-      // Train the model using the data.
-      model.fit(xs, ys, { epochs: 10 }).then(() => {
-        // Use the model to do inference on a data point the model hasn't seen before:
-        document.getElementById('ts').innerText = model.predict(tf.tensor2d([5], [1, 1]));
-        // Open the browser devtools to see the output
-      });
-    </script>
-  </body>
+  <body></body>
 </html>
