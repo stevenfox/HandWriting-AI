@@ -1,4 +1,4 @@
-## -# HandWriting-AI
+## -# HandWriting - AI, Machine learning
 
 -English Deep Writer
 -In this notebook I have built a deep neural network that can successfully identify writers based on their writing style. The data used to build the model was collected from IAM Handwriting database. This model is built on handwriting from 50 different writers. Each writer has written multiple paragraphs and sentences have been extracted from those paragraphs.
